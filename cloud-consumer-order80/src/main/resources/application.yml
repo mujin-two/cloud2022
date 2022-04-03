@@ -1,0 +1,13 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-consumer-service
+
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db2022?serverTimezone=GMT%2B8
+    username: root
+    password: admin
