@@ -25,4 +25,10 @@ public class PaymentController {
     public String paymentInfo_TimeOut(@PathVariable("id") Integer id) {
         return paymentService.paymentInfo_TimeOut(id);
     }
+
+    //========服务熔断
+    @GetMapping("/payment/circuit/{id}")
+    public String paymentCircuitBreaker(@PathVariable("id") Integer id) {
+        return paymentService.paymentCircuitBreaker(id);
+    }
 }
