@@ -8,12 +8,25 @@ spring:
     config:
       server:
         git:
-          uri: git@github:com:mujin-two/cloud2022.git
+          uri: https://github.com/mujin-two/cloud2022.git
+          # uri: git@github.com:mujin-two/cloud2022.git
           search-paths:
             - springcloud-config
         label: master
+  # 配置RabbitMQ
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'bus-refresh'
