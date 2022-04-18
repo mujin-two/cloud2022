@@ -48,6 +48,7 @@ public class PaymentController {
 
     @GetMapping(value = "/payment/discovery")
     public Object discovery() {
+        // 获取所有服务并显示
         List<String> services = discoveryClient.getServices();
         for (String service:
              services) {
